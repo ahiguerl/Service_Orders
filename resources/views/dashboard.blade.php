@@ -13,10 +13,10 @@
           <div class="card-body row">
 
             <div class="sidenav">
-              <div class="">
+              <div class="sidenav-title">
                 Ordenes de Servicio
               </div>
-              <div class="">
+              <div>
 
                 <a class="sidenav-item" href="#about">About</a>
                 <a class="sidenav-item" href="#about">About</a>
