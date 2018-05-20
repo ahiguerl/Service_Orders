@@ -16,8 +16,9 @@ class DatabaseSeeder extends Seeder
 
         // factory(App\RepairProcess::class)->times(10)->create();
 
-        //factory(App\Client::class)->times(10000)->create();
+        //factory(App\Client::class)->times(100)->create();
 
-        factory(App\User::class)->times(15)->create();
+        factory(App\ServiceOrder::class)->times(100)->create();
+        //actory(App\User::class)->times(15)->create();
     }
 }
