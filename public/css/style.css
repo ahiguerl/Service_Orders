@@ -5,15 +5,55 @@ font-weight: normal;
 src: local('Eras Light ITC'),
 url('ERASLGHT.woff') format('woff');
 }
+.btn, .dropdown-item{
+  font-size:18px !important;
+}
 
 .myBody{
   background-color: #ffffff !important;
-
-}
-.myNavbar, .card-header{
-  background-color: #222222 !important;
   font-family:'Eras Light ITC';
   font-weight:normal;
-  /* font-size:42px */
+  font-size:18px;
+}
+.myNavbar, .card-header, .dropdown-item{
+  color: #222222;
+}
+
+.dropdown-item:hover{
+  background-color: #0070BB;
   color: white;
 }
+
+.myNavbar, .card-header{
+  background-color: #222222 !important;
+  color: white;
+}
+
+/* Sidebar dentro de card-body */
+.sidenav {
+
+    width: 160px;
+    z-index: 1;
+    border-color: #0070BB;
+    background-color: #0070BB;
+
+    border-radius: 5px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} */
