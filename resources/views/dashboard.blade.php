@@ -12,9 +12,9 @@
           <div class="card-header text-center">Dashboard</div>
           <div class="card-body row">
 
-            <div class="sidenav col-md-3">
+            <div class="sidenav col-md-3"> {{-- Sidebar--}}
               <div class="sidenav-title text-center card-header">
-                @yield('menu-title')
+                Dashboard
               </div>
 
               <div class="sidenav-menu card-body">
@@ -26,15 +26,12 @@
                     elementos a listar
                 </div>
               </div>
-            </div>
+            </div> {{--end sidebar--}}
 
-            <div class="dashboard-content col">
-              {{-- contenido --}}
+            <div class="dashboard-content col"> {{-- Content in dashboard --}}
 
               <div class="list">
-
                 <div class="card">
-
                   <div class="card-header item-list" id="listElement1" data-toggle="collapse" data-target="#elementContent1" aria-expanded="false" aria-controls="elementContent1">
                     Collapsible Group Item #1
                   </div>
@@ -45,12 +42,10 @@
                     </div>
                   </div>
                 </div>
-
               </div>
 
+            </div> {{--  end Content in dashboard --}}
 
-
-            </div>
           </div>
         </div>
       </div>
