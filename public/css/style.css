@@ -1,18 +1,20 @@
-@font-face {
+/* @font-face {
 font-family: 'Eras Light ITC';
 font-style: normal;
 font-weight: normal;
 src: local('Eras Light ITC'),
 url('ERASLGHT.woff') format('woff');
-}
+} */
+
+
 .btn, .dropdown-item{
   font-size:18px !important;
 }
 
-.myBody{
+html, body{
   background-color: #ffffff !important;
-  font-family:'Eras Light ITC';
-  font-weight:normal;
+  font-family:'Raleway', sans-serif;
+  font-weight: 100;
   font-size:18px;
 }
 .myNavbar, .card-header, .dropdown-item{
@@ -28,33 +30,53 @@ url('ERASLGHT.woff') format('woff');
   background-color: #222222 !important;
   color: white;
 }
+
+.card-header{
+  background-color: #222222 !important;
+  color: white;
+}
+
+
 .dashboard-content{
   border-radius: 5px;
-  border: 1px;
-  border-color: #0070BB;
+  padding: 0;
+  margin: 0 10px 0 10px;
+}
+
+.item-list:hover{
+  background-color: #444444 !important;
 }
 
 /* Sidebar dentro de card-body */
 .sidenav {
-
-    width: 160px;
-    z-index: 1;
-    background-color: #0070BB;
-    margin:10px;
-    border-radius: 5px;
+  min-height: 400px;
+  z-index: 1;
+  background-color: #0070BB;
+  margin: 0 10px 0 10px;
+  padding: 0;
+  border-radius: 5px;
 }
 
-.sidenav a {
-    /* padding: 6px 8px 6px 16px; */
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
+.sidenav-menu{
+  color: white;
+  padding: 10px 0 0 0;
 }
+.menuItem{
+  padding: 10px 20px 10px 20px;
+}
+.menuSubItem{
+  padding-left: 30px;
+}
+.menuItem:hover{
+  background-color: #399bdc !important;
+}
+/* .sidenav-title{
+    background-color: #222222;
+} */
 
-.sidenav a:hover {
-    color: #f1f1f1;
-}
+
+
+
 
 
 /* @media screen and (max-height: 450px) {

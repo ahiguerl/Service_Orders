@@ -12,21 +12,44 @@
           <div class="card-header text-center">Dashboard</div>
           <div class="card-body row">
 
-            <div class="sidenav">
-              <div class="sidenav-title">
-                Ordenes de Servicio
+            <div class="sidenav col-md-3">
+              <div class="sidenav-title text-center card-header">
+                @yield('menu-title')
               </div>
-              <div>
 
-                <a class="sidenav-item" href="#about">About</a>
-                <a class="sidenav-item" href="#about">About</a>
-                <a class="sidenav-item" href="#about">About</a>
+              <div class="sidenav-menu card-body">
+                <div class="menuItem" id="menuItem1" data-toggle="collapse" data-target="#menuSubItem" aria-expanded="false" aria-controls="menuSubItem">
+                  Collapsible
+                </div>
+
+                <div id="menuSubItem" class="collapse menuItem menuSubItem" aria-labelledby="menuItem1" data-parent="#sidenav-menu">
+                    elementos a listar
+                </div>
               </div>
             </div>
 
             <div class="dashboard-content col">
               {{-- contenido --}}
-              <h1>Contenido general</h1>
+
+              <div class="list">
+
+                <div class="card">
+
+                  <div class="card-header item-list" id="listElement1" data-toggle="collapse" data-target="#elementContent1" aria-expanded="false" aria-controls="elementContent1">
+                    Collapsible Group Item #1
+                  </div>
+
+                  <div id="elementContent1" class="collapse" aria-labelledby="listElement1" data-parent="#list">
+                    <div class="card-body ">
+                      elementos a listar
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
             </div>
           </div>
         </div>
