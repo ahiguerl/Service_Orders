@@ -18,4 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 // Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-  Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+  Route::get('/dashboard', 'DashboardController@index');
+  Route::get('/service-orders/list', 'ServiceOrdersController@list');
+  Route::get('/service-orders/create', 'ServiceOrdersController@create');
+  Route::get('/service-orders/edit', 'ServiceOrdersController@edit');

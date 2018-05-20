@@ -66,13 +66,17 @@ html, body{
 }
 .menuSubItem{
   padding-left: 30px;
+  text-decoration: none !important;
+  color:white: !important;
 }
 .menuItem:hover{
   background-color: #399bdc !important;
 }
-/* .sidenav-title{
-    background-color: #222222;
-} */
+
+.row-table{
+  width: 150px;
+  padding: 5px 14px 5px 14px;
+}
 
 
 
