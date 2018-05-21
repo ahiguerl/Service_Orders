@@ -19,6 +19,15 @@ Auth::routes();
 
 // Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
   Route::get('/dashboard', 'DashboardController@index');
-  Route::get('/service-orders/list', 'ServiceOrdersController@list');
-  Route::get('/service-orders/create', 'ServiceOrdersController@create');
+
+  Route::get('/dashboard/prueba', 'DashboardController@prueba');
+
   Route::get('/service-orders/edit', 'ServiceOrdersController@edit');
+
+  Route::get('/service-orders/list', 'ServiceOrdersController@list');
+
+  Route::get('/service-orders/create', 'ServiceOrdersController@create');
+
+  Route::get('/service-orders/{serviceOrder}', 'ServiceOrdersController@index'); //
+
+  Route::get('/service-orders/{serviceOrder}/work', 'ServiceOrdersController@listWorkOrders');

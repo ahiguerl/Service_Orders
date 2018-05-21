@@ -1,7 +1,16 @@
 @extends('layouts.dashboard')
 
-@section('sidebar_title')
+@section('title')
+  {{ 'Dashboard' }}
+@endsection
+
+@section('dashboard_title')
   {{ 'Órdenes de servicio' }}
+@endsection
+
+
+@section('sidebar_title')
+  {{ 'Menú' }}
 @endsection
 
 
@@ -27,12 +36,12 @@
   <tbody>
     @forelse($serviceOrders as $serviceOrder)
     <tr>
-      <th scope="row">{{ $serviceOrder->id }}</th>
-      <td>{{ $serviceOrder->date }}</td>
+      <th scope="row" style="width: 50px;" class="text-center">{{ $serviceOrder->id }}</th>
+      <td style="width: 200px;">{{ $serviceOrder->date }}</td>
       <td>{{ $serviceOrder->client_id }}</td>
-      <td class="text-right">
-        <a class="btn btn-primary btn-sm" href="http://localhost:8000/service-orders" role="button">Ver   </a>
-        <a class="btn btn-warning btn-sm" href="http://localhost:8000/service-orders/edit" role="button">Editar</a>
+      <td class="text-right" style="width: 180px;">
+        <a class="btn btn-primary btn-sm btn-table" href="http://localhost:8000/service-orders/{{ $serviceOrder->id }}/work" role="button">Ver   </a>
+        <a class="btn btn-warning btn-sm btn-table" href="http://localhost:8000/service-orders/edit" role="button">Editar</a>
       </td>
     </tr>
     @empty

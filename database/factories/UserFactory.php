@@ -27,9 +27,10 @@ $factory->define(App\User::class, function (Faker $faker) {
 
 
 $factory->define(App\Product::class, function (Faker $faker){
+  $fakeID = ['TGNHP', 'TGNSM', 'RCLXR', 'RCLSM', 'RCLHP', 'DRMSM'];
   $fakePrice = rand(1000, 500000);
     return [
-      'id' => strtoupper(str_random(5)) . '_' . rand(1000, 9999),
+      'id' => $fakeID[rand(0, 5)] . '-' . rand(1000, 9999),
       'description' => $faker->words(4, true),
       'purchase_price' => $fakePrice,
       'sale_price' => $fakePrice  * 1.3,
@@ -72,6 +73,7 @@ $factory->define(App\OrderStatus::class, function(Faker $faker){
 $factory->define(App\Supply::class, function(Faker $faker){
   $meassure = ['Gram', 'Kilogram', 'Liter', 'Mililiter'];
   return[
+      'id' => strtoupper(str_random(12)),
       'detail' => $faker->words(4, true),
       'unit_of_measurement' => $meassure[rand(0, 3)],
   ];
@@ -91,5 +93,50 @@ $factory->define(App\ServiceOrder::class, function(Faker $faker){
     'date' => date('Y-m-d G:i:s'),
     'is_open' => true,
     'client_id' => $fakeClient[rand(0, 23)],
+  ];
+});
+
+$factory->define(App\RepairedItem::class, function(Faker $faker){
+  $fakeProductId = ['DRMSM-3096','DRMSM-4760','DRMSM-9797','RCLHP-2610',
+       'RCLHP-8222','RCLSM-4728','RCLSM-6270','RCLSM-6657','RCLSM-9842',
+       'RCLXR-8096','TGNHP-1074','TGNHP-4495','TGNSM-2789','TGNSM-3745','TGNSM-7591',];
+  return[
+    'product_id' => $fakeProductId[rand(0, 14)] ,
+    'serial_number' => strtoupper(str_random(12)),
+  ];
+});
+
+$factory->define(App\WorkOrder::class, function(Faker $faker){
+  return[
+    'service_order_id' => rand(0, 99),
+    'repaired_item_id' => rand(0, 99),
+    'order_status_id' => 1,
+    'description' => 'Texto de descripción ' . $faker->text(40),
+    'remark' => 'Observaciones ' . $faker->text(20),
+  ];
+});
+
+$factory->define(App\RequiredSupply::class, function(Faker $faker){
+  $supplyIde = ['0QGQN3HA1UC9','1FT0VRGEU7YL','208ILFAEIIRW','2YVLCODGOCRY',
+  '62TVPPOEQDQU','6GY46KCKHW4Q','7BMECFICOAOR','9O1RH5OWRGQO',
+  'A5ESX6YV3BQM','BLQ73MBWAKT1','BLT0O0RSIODA','CX6MKFFUOWY1',
+  'GETDUTH8MDFA','GGEAFSX6CEDD','GJTGKI3LS4GW','ITR6KUTPJCSB',
+  'KFQLHDV7KUJB','KXACZKGAWFLC','MQ17IGLNIKZT','OB3BUOK2V8ME',
+  'ONIJ7YG8WXVO','P8SIK5C8DHN6','Q1P2FZ9RDJPI','QA0UNR641HLA',
+  'RZVXUHNUISYJ','SEZYHZI9ZZPV','SXLJK936BTHX','T9QT4LESC0SE',
+  'TKLHKSW6FWQJ','UOEOUOYI4RUH','VE2NLDGQQRKJ','VHSYIDZKXNFO',
+  'W08EEJGP288C','WMJFONFRD63L','XHHIUW910Z6B','XOVHWCFZNASU',
+  'YSICZBDWPYHO','ZDB3N4PPP3MO','ZI8TE8PLA784','ZINP8Q5KBDQ0',];
+
+  $fakeProductId = ['DRMSM-3096','DRMSM-4760','DRMSM-9797','RCLHP-2610',
+  'RCLHP-8222','RCLSM-4728','RCLSM-6270','RCLSM-6657','RCLSM-9842',
+  'RCLXR-8096','TGNHP-1074','TGNHP-4495','TGNSM-2789','TGNSM-3745','TGNSM-7591',];
+
+
+  return[
+    'supply_id'=> $supplyIde[rand(0, 39)],
+    'product_id'=> $fakeProductId[rand(0, 14)],
+    'repair_process_id'=> rand(0, 9),
+    'quantity'=> rand(1, 100),
   ];
 });
