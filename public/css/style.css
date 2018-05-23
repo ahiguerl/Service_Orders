@@ -27,15 +27,19 @@ html, body{
 }
 
 .myNavbar, .card-header{
-  background-color: #222222 !important;
+  background-color: #222222 !important; /*Gris oscuro*/
   color: white;
 }
 
 .card-header{
-  background-color: #222222 !important;
+  background-color: #222222 !important; /*Gris oscuro*/
   color: white;
 }
 
+.myCardHeader{
+  color: #222222 !important;
+  background-color: #f7f4f4 !important;
+}
 
 .dashboard-content{
   border-radius: 5px;
@@ -44,7 +48,8 @@ html, body{
 }
 
 .item-list:hover{
-  background-color: #444444 !important;
+  background-color: #0070BB !important;
+  color: white !important;
 }
 
 /* Sidebar dentro de card-body */
@@ -77,9 +82,26 @@ html, body{
   width: 80px;
 }
 
+.pagination{
+  justify-content: center;
+}
 
+.active span{
+  background-color: #0070BB !important;
+  border-color: #0070BB !important;
+}
 
+.page-item a{
+  background-color: #f7f4f4 !important;
+  color: #222222;
+  border-color: #dfdfdf;
+}
 
+.page-item a:hover{
+  background-color: #0070BB !important;
+  border-color: #0070BB !important;
+  color: white !important;
+}
 
 
 /* @media screen and (max-height: 450px) {

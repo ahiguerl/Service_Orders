@@ -39,7 +39,7 @@ class ServiceOrdersController extends Controller
 
 
   public function list() {
-    $serviceOrders = ServiceOrder::all(); // Approach the ORM to get the data form the DB
+    $serviceOrders = ServiceOrder::paginate(10); // Approach the ORM to get the data form the DB
     return view('serviceOrders.list', [
       'serviceOrders' => $serviceOrders,
     ]);
@@ -68,7 +68,7 @@ class ServiceOrdersController extends Controller
               ->select('service_orders.*', 'clients.name as client_name', 'work_orders.*', 'products.description as product_name', 'repaired_items.*',
               'order_statuses.name as status')
               ->where('service_order_id', $id)
-              ->get();
+              ->simplePaginate(15);
 
     return view('serviceOrders.view',[
       'workOrders' => $workOrders, // 'workOrder' será el nombre de la variale que puedo usar en la vista a la hora de listar.

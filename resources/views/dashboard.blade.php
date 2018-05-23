@@ -1,5 +1,13 @@
 @extends('layouts.dashboard')
 
+@section('title')
+  {{ 'Dashboard' }}
+@endsection
+
+@section('dashboard_title')
+  {{ 'Dashboard' }}
+@endsection
+
 @section('sidebar_title')
   {{ 'Menú' }}
 @endsection

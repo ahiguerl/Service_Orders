@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-  {{ 'Dashboard' }}
+  {{ 'Órdenes de servicio' }}
 @endsection
 
 @section('dashboard_title')
@@ -23,7 +23,7 @@
 
 
 @section('dashboard_content')
-  <table class="table table-sm table-hover">
+  <table class="table table-sm myCardHeader">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -35,7 +35,7 @@
 
   <tbody>
     @forelse($serviceOrders as $serviceOrder)
-    <tr>
+    <tr class="item-list">
       <th scope="row" style="width: 50px;" class="text-center">{{ $serviceOrder->id }}</th>
       <td style="width: 200px;">{{ $serviceOrder->date }}</td>
       <td>{{ $serviceOrder->client_id }}</td>
@@ -50,7 +50,9 @@
   </tbody>
 </table>
 
-
+<div class="pagination">
+  {{ $serviceOrders->links() }}
+</div>
 
 
 @endsection

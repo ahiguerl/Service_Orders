@@ -1,7 +1,12 @@
 @extends('layouts.dashboard')
 
+@section('title')
+  {{ 'Orden de servicio # ' . $workOrders[0]->service_order_id }}
+@endsection
+
+
 @section('dashboard_title')
-  {{ 'Órden de servicio #' . $workOrders[0]->service_order_id}}
+  {{ 'Orden de servicio #' . $workOrders[0]->service_order_id}}
   {{-- {{ dd($workOrders)}} --}}
 @endsection
 
@@ -19,14 +24,22 @@
 
 
 @section('dashboard_content')
-  <div class="card-body"> {{--Datos Cliente--}}
-     <b>Cliente: </b>{{ $workOrders[0]->client_name}} <br>
-     <b>Nit: </b>{{ $workOrders[0]->client_id }}
+  <div class="card-header"> {{--Datos Cliente--}}
+    <table>
+      <tr>
+        <th>Cliente:</th>
+        <td style="padding-left: 20px;">{{ $workOrders[0]->client_name}}</td>
+      </tr>
+      <tr>
+        <th>Nit:  </th>
+        <td style="padding-left: 20px;">{{ $workOrders[0]->client_id }}</td>
+      </tr>
+    </table>
   </div>
   @forelse($workOrders as $workOrder)
     <div class="card">
-      <div class="card-header item-list" id="listElement{{$workOrder->id}}" data-toggle="collapse" data-target="#elementContent{{$workOrder->id}}" aria-expanded="false" aria-controls="elementContent{{$workOrder->id}}">
-        {{ 'Órden de trabajo # ' . $workOrder->id }}
+      <div class="card-header myCardHeader item-list" id="listElement{{$workOrder->id}}" data-toggle="collapse" data-target="#elementContent{{$workOrder->id}}" aria-expanded="false" aria-controls="elementContent{{$workOrder->id}}">
+        {{ 'Orden de trabajo # ' . $workOrder->id }}
       </div>
 
       <div id="elementContent{{$workOrder->id}}" class="collapse" aria-labelledby="listElement{{$workOrder->id}}" data-parent="#list">
