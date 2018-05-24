@@ -24,14 +24,7 @@ class ServiceOrdersController extends Controller
   */
 
 
-  public function index(ServiceOrder $serviceOrder) {
-    //buscar orden por id.
-    // $serviceOrder = ServiceOrder::find($id);
-    return view('serviceOrders.view', [
-      'serviceOrder' => $serviceOrder,
-    ]);
-  }
-
+  
 
   public function create() {
     return 'creado';

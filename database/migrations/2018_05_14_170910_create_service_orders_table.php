@@ -16,7 +16,7 @@ class CreateServiceOrdersTable extends Migration
         Schema::create('service_orders', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->dateTime('date');
+            // $table->dateTime('date');
             $table->boolean('is_open');
         });
     }

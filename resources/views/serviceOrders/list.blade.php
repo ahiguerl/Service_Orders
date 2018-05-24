@@ -16,7 +16,7 @@
 
 
 @section('sidebar_options')
-  <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/service-orders/create">Crear</a></div>
+  <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/services/create">Crear</a></div>
 @endsection
 
 
@@ -37,11 +37,11 @@
     @forelse($serviceOrders as $serviceOrder)
     <tr class="item-list">
       <th scope="row" style="width: 50px;" class="text-center">{{ $serviceOrder->id }}</th>
-      <td style="width: 200px;">{{ $serviceOrder->date }}</td>
+      <td style="width: 200px;">{{ $serviceOrder->created_at }}</td>
       <td>{{ $serviceOrder->client_id }}</td>
       <td class="text-right" style="width: 180px;">
-        <a class="btn btn-primary btn-sm btn-table" href="http://localhost:8000/service-orders/{{ $serviceOrder->id }}/work" role="button">Ver   </a>
-        <a class="btn btn-warning btn-sm btn-table" href="http://localhost:8000/service-orders/edit" role="button">Editar</a>
+        <a class="btn btn-primary btn-sm btn-table" href="http://localhost:8000/services/works/{{ $serviceOrder->id }}" role="button">Ver   </a>
+        <a class="btn btn-warning btn-sm btn-table" href="http://localhost:8000/services/edit" role="button">Editar</a>
       </td>
     </tr>
     @empty

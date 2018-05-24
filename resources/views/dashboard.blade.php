@@ -19,8 +19,8 @@
     Órdenes de Servicio
   </div>
   <div id="menuSubItem1" class="collapse" aria-labelledby="menuItem1" data-parent="#sidenav-menu">
-      <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/service-orders/create">Crear</a></div>
-      <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/service-orders/list">Listar</a></div>
+      <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/services/create">Crear</a></div>
+      <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/services/list">Listar</a></div>
       <div class="menuItem"><a class="menuSubItem" style="color: white;" href="#">Modificar</a></div>
   </div>
 

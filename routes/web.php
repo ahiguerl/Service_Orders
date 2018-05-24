@@ -22,14 +22,12 @@ Auth::routes();
 
   Route::get('/dashboard/prueba', 'DashboardController@prueba');
 
-  Route::get('/service-orders/edit', 'ServiceOrdersController@edit');
+  Route::get('/services/edit', 'ServiceOrdersController@edit');
 
-  Route::get('/service-orders/list', 'ServiceOrdersController@list');
+  Route::get('/services/list', 'ServiceOrdersController@list');
 
-  Route::get('/service-orders/create', 'ServiceOrdersController@create');
+  Route::get('/services/create', 'ServiceOrdersController@create');
 
-  Route::get('/service-orders/{serviceOrder}', 'ServiceOrdersController@index'); //
-
-  Route::get('/service-orders/{serviceOrder}/work', 'ServiceOrdersController@listWorkOrders');
+  Route::get('/services/works/{serviceOrder}', 'ServiceOrdersController@listWorkOrders');
 
   Route::get('/clients/create', 'ClientsController@create');
