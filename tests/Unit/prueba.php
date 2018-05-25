@@ -1,21 +1,20 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
-use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class WhoIsLoggedIn extends TestCase
+class prueba extends TestCase
 {
     /**
      * A basic test example.
      *
      * @return void
      */
-     public function testBasicTest()
-     {
-       $this->assertTrue(true);
-     }
+    public function testExample()
+    {
+        $this->assertTrue(true);
+    }
 }

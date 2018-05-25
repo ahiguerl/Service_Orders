@@ -55,7 +55,7 @@
             <tbody>
               <tr>
                 <th scope="row">Fecha</th>
-                <td>{{ $workOrder->date}}</td>
+                <td>{{ $workOrder->created_at}}</td>
               </tr>
               <tr>
                 <th scope="row">Item a reparar</th>

@@ -12,15 +12,23 @@ class ExampleTest extends TestCase
   *
   * @return void
   */
-  public function testBasicTest()
-  {
-    $this->assertTrue(true);
-  // }
-  //
+
   // public function testGettingService(){
   //
   //   $response = $this->get('/services/works/1');
   //   // $response->assertSuccessful();
-    // $browser->assertTitle($title);
+  //   $response->assertSeeText('context');
+  // }
+
+
+  public function testDataBase(){
+
+    $this->assertTrue(true);
+    //
+    // $response = $this->get('/clients');
+    //
+    // $this->assertDatabaseHas('clients', [
+    //    'id' => '974312056-4'
+    // ]);
   }
 }

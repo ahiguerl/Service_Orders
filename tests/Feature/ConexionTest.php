@@ -12,9 +12,21 @@ class ConexionTest extends TestCase
      *
      * @return void
      */
-    public function testServerTest()
+    public function testHomeRoute()
     {
         $response = $this->get('/');
-        $response->assertStatus(200);
+        $response->assertStatus(404);
+    }
+
+    public function testNotFound()
+    {
+        $response = $this->get('/algo');
+        $response->assertStatus(403);
+    }
+
+    public function testServerTest()
+    {
+        $response = $this->get('/services/list');
+        $response->assertStatus(302);
     }
 }

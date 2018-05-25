@@ -26,13 +26,22 @@ class UserTest extends TestCase
       'password' => 'secret',
     ]);
 
-    // Prueba si está autenticado
     $this->assertAuthenticated();
 
-    // Prueba si quien está autenticado, es realmente el usuario recién registrado.
+  }
+
+  public function testWhoIsLoggedIn() {
+
+    $user = factory(User::class)->create();
+    $response = $this->post('/login', [
+      'email' => $user->email,
+      'password' => 'secret',
+    ]);
+
     $this->assertAuthenticatedAs($user);
 
   }
+
 
 
 }
