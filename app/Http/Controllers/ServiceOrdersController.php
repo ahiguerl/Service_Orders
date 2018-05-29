@@ -24,7 +24,7 @@ class ServiceOrdersController extends Controller
   */
 
 
-  
+
 
   public function create() {
     return 'creado';
@@ -59,7 +59,7 @@ class ServiceOrdersController extends Controller
               ->join('products', 'repaired_items.product_id', '=', 'products.id')
               ->join('order_statuses', 'work_orders.order_status_id', '=', 'order_statuses.id')
               ->select('service_orders.*', 'clients.name as client_name', 'work_orders.*', 'products.description as product_name', 'repaired_items.*',
-              'order_statuses.name as status')
+              'order_statuses.id as status')
               ->where('service_order_id', $id)
               ->simplePaginate(15);
 

@@ -18,7 +18,7 @@
 
 
 @section('sidebar_options')
-  <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/service-orders/list">Volver</a></div>
+  <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/services/list">Volver</a></div>
 @endsection
 
 
@@ -80,7 +80,29 @@
               <tr>
                 <th scope="row">Estado</th>
                 <td>
-                  {{ $workOrder->status}}
+                  <select class="" name="">
+                    @if($workOrder->status == 1)
+                      <option value="1" selected="true">En cola</option>
+                      <option value="2" >En proceso</option>
+                      <option value="3" >Rechazado</option>
+                      <option value="4" >Terminado</option>
+                    @elseif ($workOrder->status == 2)
+                      <option value="1" >En cola</option>
+                      <option value="2" selected="true">En proceso</option>
+                      <option value="3" >Rechazado</option>
+                      <option value="4" >Terminado</option>
+                    @elseif ($workOrder->status == 3)
+                      <option value="1" >En cola</option>
+                      <option value="2" >En proceso</option>
+                      <option value="3" selected="true">Rechazado</option>
+                      <option value="4" >Terminado</option>
+                    @elseif ($workOrder->status == 4)
+                      <option value="1" >En cola</option>
+                      <option value="2" >En proceso</option>
+                      <option value="3" >Rechazado</option>
+                      <option value="4" selected="true">Terminado</option>
+                    @endif
+                  </select>
                 </td>
               </tr>
             </tbody>

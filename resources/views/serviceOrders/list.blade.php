@@ -41,7 +41,7 @@
       <td>{{ $serviceOrder->client_id }}</td>
       <td class="text-right" style="width: 180px;">
         <a class="btn btn-primary btn-sm btn-table" href="http://localhost:8000/services/works/{{ $serviceOrder->id }}" role="button">Ver   </a>
-        <a class="btn btn-warning btn-sm btn-table" href="http://localhost:8000/services/edit" role="button">Editar</a>
+        <a class="btn btn-danger btn-sm btn-table" href="http://localhost:8000/services/edit" role="button">Eliminar</a>
       </td>
     </tr>
     @empty
