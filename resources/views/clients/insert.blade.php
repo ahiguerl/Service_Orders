@@ -96,7 +96,7 @@
                 <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Teléfono') }}</label>
 
                 <div class="col-md-4">
-                  <input type="text" class="form-control {{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}">
+                  <input type="text" class="form-control {{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" placeholder="Ext">
 
                   @if ($errors->has('phone'))
                     <span class="invalid-feedback">
@@ -108,11 +108,11 @@
                 <div class="col-md-2">
                   <input type="text" class="form-control {{ $errors->has('extension_number') ? ' is-invalid' : '' }}" name="extension_number" value="{{ old('extension_number') }}">
 
-                  {{-- @if ($errors->has('extension_number'))
+                  @if ($errors->has('extension_number'))
                     <span class="invalid-feedback">
                       <strong>{{ $errors->first('extension_number') }}</strong>
                     </span>
-                  @endif --}}
+                  @endif
                 </div>
               </div>
 
@@ -131,20 +131,6 @@
                 </div>
               </div>
 
-{{-- Extension --}}
-              {{-- <div class="form-group row ">
-                <label for="extension_number" class="col-md-4 col-form-label text-md-right">{{ __('Extensión') }}</label>
-
-                <div class="col-md-6">
-                  <input type="text" class="form-control {{ $errors->has('extension_number') ? ' is-invalid' : '' }}" name="extension_number" value="{{ old('extension_number') }}">
-
-                  @if ($errors->has('extension_number'))
-                    <span class="invalid-feedback">
-                      <strong>{{ $errors->first('extension_number') }}</strong>
-                    </span>
-                  @endif
-                </div>
-              </div> --}}
 
 {{-- Email --}}
               <div class="form-group row ">

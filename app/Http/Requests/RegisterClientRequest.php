@@ -37,9 +37,9 @@ class RegisterClientRequest extends FormRequest
 
   public function messages(){
     return [
-      // 'name.required' => 'El nombre o razón social es requerido',
-      // 'name.max' => 'La longitud del nombre no debe exceder los 100',
-      // 'address.required' => 'La dirección es requerida',
+      'name.required' => 'El nombre o razón social es requerido',
+      'name.max' => 'La longitud del nombre no debe exceder los 100',
+      'address.required' => 'La dirección es requerida',
     ];
   }
 }
