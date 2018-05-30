@@ -32,4 +32,6 @@ Auth::routes();
 
   Route::get('/service-orders/{serviceOrder}/work', 'ServiceOrdersController@listWorkOrders');
 
-  Route::get('/clients/create', 'ClientsController@create');
+  Route::get('/clients/register', 'ClientsController@register');
+
+  Route::post('/clients/create', 'ClientsController@create');
