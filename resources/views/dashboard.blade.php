@@ -19,8 +19,13 @@
     Órdenes de Servicio
   </div>
   <div id="menuSubItem1" class="collapse" aria-labelledby="menuItem1" data-parent="#sidenav-menu">
+<<<<<<< HEAD
       <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/services/create">Crear</a></div>
       <div class="menuItem"><a class="menuSubItem" style="color: white;" href="http://localhost:8000/services/list">Listar</a></div>
+=======
+      <div class="menuItem"><a class="menuSubItem" style="color: white;" href="/service-orders/create">Crear</a></div>
+      <div class="menuItem"><a class="menuSubItem" style="color: white;" href="/service-orders/list">Listar</a></div>
+>>>>>>> Clients
       <div class="menuItem"><a class="menuSubItem" style="color: white;" href="#">Modificar</a></div>
   </div>
 
@@ -28,7 +33,7 @@
     Clientes
   </div>
   <div id="menuSubItem2" class="collapse" aria-labelledby="menuItem2" data-parent="#sidenav-menu">
-    <div class="menuItem"><a class="menuSubItem" style="color: white;" href="">Crear</a></div>
+    <div class="menuItem"><a class="menuSubItem" style="color: white;" href="/clients/register">Crear</a></div>
     <div class="menuItem"><a class="menuSubItem" style="color: white;" href="#">Listar</a></div>
     <div class="menuItem"><a class="menuSubItem" style="color: white;" href="#">Modificar</a></div>
   </div>

@@ -8,15 +8,16 @@ class Client extends Model
 {
     protected $table = 'clients';
     protected $fillable = [
+      'id',
       'name',
       'address',
       'city',
       'cellphone',
       'phone',
       'contact_name',
-      'extension_number'
+      'extension_number',
+      'email',
     ];
-    protected $guarded = ['id'];
 
 
     //Relationships
