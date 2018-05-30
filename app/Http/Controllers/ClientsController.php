@@ -22,14 +22,14 @@ class ClientsController extends Controller{
   public function create(RegisterClientRequest $request) {
 
     $client = Client::create([
-      'id' => $request['ide'],
+      'id' => $request['id'],
       'name' => $request['name'],
       'address' => $request['address'],
       'city' => $request['city'],
       'cellphone' => $request['cellphone'],
       'phone' => $request['phone'],
       'contact_name' => $request['contact_name'],
-      'extension_number' => $request['ext'],
+      'extension_number' => $request['extension_number'],
       'email' => $request['email'],
     ]);
 
