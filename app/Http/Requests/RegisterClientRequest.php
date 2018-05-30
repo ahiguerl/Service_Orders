@@ -23,14 +23,14 @@ class RegisterClientRequest extends FormRequest
   */
   public function rules(){
     return [
-      'id' => 'required',
-      'name' => 'required|string|max:100|unique:clients',
+      'id' => 'required|max:100|unique:clients',
+      'name' => 'required|string|max:100',
       'address' => 'required|string|max:200',
       'city' => 'required|integer|max:11',
       'cellphone' => 'required|string|max:10',
       'phone' => 'required|string|max:7',
-      'contact_name' => 'nulleable|string|max:255',
-      'extension_number' => 'nulleable|string|max:5',
+      'contact_name' => 'nullable|string|max:255',
+      'extension_number' => 'nullable|max:5',
       'email' => 'required|string|email|max:60|unique:clients',
     ];
   }

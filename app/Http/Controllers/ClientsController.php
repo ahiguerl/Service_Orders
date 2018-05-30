@@ -4,20 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Client;
 use Illuminate\Http\Request;
-use App\Client;
 use App\Http\Requests\RegisterClientRequest;
 
-<<<<<<< HEAD
-class ClientsController extends Controller
-{
 
-  public function getClient(){
-
-     $clients = Client::Where('id', '974312056-4')->get();
-     return dd($clients);
-  }
-
-=======
 class ClientsController extends Controller{
 
   public function __construct(){
@@ -33,14 +22,14 @@ class ClientsController extends Controller{
   public function create(RegisterClientRequest $request) {
 
     $client = Client::create([
-      'id' => $request['id'],
+      'id' => $request['ide'],
       'name' => $request['name'],
       'address' => $request['address'],
       'city' => $request['city'],
       'cellphone' => $request['cellphone'],
       'phone' => $request['phone'],
       'contact_name' => $request['contact_name'],
-      'extension_number' => $request['extension_number'],
+      'extension_number' => $request['ext'],
       'email' => $request['email'],
     ]);
 
@@ -48,5 +37,5 @@ class ClientsController extends Controller{
 
     // dd($client);
   }
->>>>>>> Clients
+
 }

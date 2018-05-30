@@ -18,14 +18,14 @@
 
 {{-- ID --}}
               <div class="form-group row">
-                <label for="id" class="col-md-4 col-form-label text-md-right">{{ __('NIT o CC') }}</label>
+                <label for="ide" class="col-md-4 col-form-label text-md-right">{{ __('NIT o CC') }}</label>
 
                 <div class="col-md-6">
-                  <input id="id" type="text" class="form-control{{ $errors->has('id') ? ' is-invalid' : '' }}" name="id" value="{{ old('id') }}"  autofocus>
+                  <input id="ide" type="text" class="form-control{{ $errors->has('ide') ? ' is-invalid' : '' }}" name="ide" value="{{ old('ide') }}">
 
-                  @if ($errors->has('id'))
+                  @if ($errors->has('ide'))
                     <span class="invalid-feedback">
-                      <strong>{{ $errors->first('id') }}</strong>
+                      <strong>{{ $errors->first('ide') }}</strong>
                     </span>
                   @endif
                 </div>
@@ -36,7 +36,7 @@
                 <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre o Razón Social') }}</label>
 
                 <div class="col-md-6">
-                  <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}"  autofocus>
+                  <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}">
 
                   @if ($errors->has('name'))
                     <span class="invalid-feedback">
@@ -51,7 +51,7 @@
                 <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Dirección') }}</label>
 
                 <div class="col-md-6">
-                  <input id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}"  autofocus>
+                  <input id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}">
 
                   @if ($errors->has('address'))
                     <span class="invalid-feedback">
@@ -66,7 +66,7 @@
                 <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Ciudad') }}</label>
 
                 <div class="col-md-6">
-                  <input id="city" type="text" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}" name="city" value="{{ old('city') }}"  autofocus>
+                  <input id="city" type="text" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}" name="city" value="{{ old('city') }}">
 
                   @if ($errors->has('city'))
                     <span class="invalid-feedback">
@@ -91,11 +91,11 @@
                 </div>
 
                 <div class="col-md-2">
-                  <input id="extension_number" type="text" placeholder="Ext" class="form-control{{ $errors->has('extension_number') ? ' is-invalid' : '' }}" name="id" value="{{ old('extension_number') }}"  autofocus>
+                  <input id="ext" type="text" placeholder="Ext" class="form-control{{ $errors->has('ext') ? ' is-invalid' : '' }}" name="ext" value="{{ old('ext') }}" >
 
-                  @if ($errors->has('extension_number'))
+                  @if ($errors->has('ext'))
                     <span class="invalid-feedback">
-                      <strong>{{ $errors->first('extension_number') }}</strong>
+                      <strong>{{ $errors->first('ext') }}</strong>
                     </span>
                   @endif
                 </div>
