@@ -38,15 +38,7 @@
 
 
 @section('dashboard_content')
-  <div class="card">
-    <div class="card-header item-list" id="listElement1" data-toggle="collapse" data-target="#elementContent1" aria-expanded="false" aria-controls="elementContent1">
-      Collapsible Group Item #1
-    </div>
-
-    <div id="elementContent1" class="collapse" aria-labelledby="listElement1" data-parent="#list">
-      <div class="card-body ">
-        elementos a listar
-      </div>
-    </div>
+  <div class="card text-center">
+    Bienvenido a Restorink!
   </div>
 @endsection
