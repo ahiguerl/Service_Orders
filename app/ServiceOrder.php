@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class ServiceOrder extends Model
 {
   protected $table = 'service_orders';
-  protected $fillable = ['client_id'];
-  protected $guarded = ['id', 'is_open'];
+  protected $fillable = ['client_id', 'is_open'];
+  protected $guarded = ['id'];
 
   // Relationships
   public function workOrder(){

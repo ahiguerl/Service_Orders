@@ -26,8 +26,14 @@ class ServiceOrdersController extends Controller
 
 
 
-  public function create() {
-    return 'creado';
+  public function create(Request $request) {
+
+    $serviceOrder = ServiceOrder::create([
+      'client_id' => $request['id'],
+      'is_open' => 1,
+    ]);
+
+    return redirect('/services/works/' . $serviceOrder->id);
   }
 
 
