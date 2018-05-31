@@ -1,5 +1,19 @@
 @extends('layouts.dashboard')
 
+@section('alerts')
+  @if (session('danger'))
+    <div class="alert alert-danger text-center">
+        {{ session('status') }}
+    </div>
+  @endif
+
+  @if (session('success'))
+    <div class="alert alert-success text-center">
+        {{ session('success') }}
+    </div>
+  @endif
+@endsection
+
 @section('title')
   {{ 'Dashboard' }}
 @endsection
@@ -46,4 +60,11 @@
 
     @include('serviceOrders.modal')
 
+@endsection
+
+
+@section('scripts')
+  function mensaje(msg) {
+    alert(msg);
+  }
 @endsection

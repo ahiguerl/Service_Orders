@@ -33,7 +33,7 @@ class ClientsController extends Controller{
       'email' => $request['email'],
     ]);
 
-    return redirect('/dashboard');
+    return redirect('/dashboard')->with('success', 'El cliente fue creado exitosamente!.');
 
     // dd($client);
   }

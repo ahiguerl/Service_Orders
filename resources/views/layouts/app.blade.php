@@ -16,6 +16,7 @@
   <!-- Scripts -->
 
   <script src="{{ asset('js/app.js') }}" defer></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
 
   <!-- Fonts -->
@@ -74,12 +75,16 @@
     </div>
   </nav>
 
+  @yield('alerts')
+
   <main class="py-4">
     @yield('content')
   </main>
   <svg id="barcode"></svg>
 </div>
 <script type="text/javascript">
+  @yield('scripts')
+
   var element =  document.getElementById ("barcode");
   JsBarcode(element, "prueba");
 </script>
