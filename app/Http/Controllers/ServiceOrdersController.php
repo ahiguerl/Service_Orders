@@ -29,17 +29,15 @@ class ServiceOrdersController extends Controller
 
 
   public function create(Request $request) {
-
     if (Client::find($request['id'])) {
       $serviceOrder = ServiceOrder::create([
         'client_id' => $request['id'],
         'is_open' => 1,
       ]);
-      return redirect('/services/works/' . $serviceOrder->id);
+      return redirect('/works/create')->with('serviceId', $serviceOrder->id ); // envío del parámetro através de la sesión
     } else{
       return redirect('/dashboard')->with('danger', 'El cliente no existe o no se digitó correctamente.');
     }
-
   }
 
 
@@ -54,6 +52,20 @@ class ServiceOrdersController extends Controller
     return 'editado';
   }
 
+  public function deleteOrder($id) {
+    // if () {
+    //   // code...
+    // } else {
+    //   // code...
+    // }
+
+    $workOrders = DB::table('service_orders')
+    ->join('work_orders', 'service_orders.id', '=', 'work_orders.service_order_id')
+    ->select('*')
+    ->where('service_order_id', $id)->delete();
+
+    // return redirect('/services/list');
+  }
 
   public function listWorkOrders($id) {
     // $workOrders = WorkOrder::where('service_order_id', $id)->get();

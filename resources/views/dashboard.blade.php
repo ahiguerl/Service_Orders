@@ -3,7 +3,7 @@
 @section('alerts')
   @if (session('danger'))
     <div class="alert alert-danger text-center">
-        {{ session('status') }}
+        {{ session('danger') }}
     </div>
   @endif
 
@@ -60,11 +60,4 @@
 
     @include('serviceOrders.modal')
 
-@endsection
-
-
-@section('scripts')
-  function mensaje(msg) {
-    alert(msg);
-  }
 @endsection

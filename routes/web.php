@@ -26,9 +26,13 @@ Auth::routes();
 
   Route::get('/services/list', 'ServiceOrdersController@list');
 
+  Route::delete('/services/delete/{serviceOrder}', 'ServiceOrdersController@deleteOrder');
+
   Route::post('/services/create', 'ServiceOrdersController@create');
 
   Route::get('/services/works/{serviceOrder}', 'ServiceOrdersController@listWorkOrders');
+
+  Route::post('/works/create', 'WorkOrderController@create');
 
   Route::get('/clients/register', 'ClientsController@register');
 
