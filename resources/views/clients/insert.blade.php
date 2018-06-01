@@ -96,7 +96,7 @@
                 <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Teléfono') }}</label>
 
                 <div class="col-md-4">
-                  <input type="text" class="form-control {{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" placeholder="Ext">
+                  <input type="text" class="form-control {{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}">
 
                   @if ($errors->has('phone'))
                     <span class="invalid-feedback">
@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="col-md-2">
-                  <input type="text" class="form-control {{ $errors->has('extension_number') ? ' is-invalid' : '' }}" name="extension_number" value="{{ old('extension_number') }}">
+                  <input type="text" class="form-control {{ $errors->has('extension_number') ? ' is-invalid' : '' }}" name="extension_number" value="{{ old('extension_number') }}"  placeholder="Ext">
 
                   @if ($errors->has('extension_number'))
                     <span class="invalid-feedback">

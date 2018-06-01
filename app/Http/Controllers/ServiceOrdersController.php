@@ -34,7 +34,7 @@ class ServiceOrdersController extends Controller
         'client_id' => $request['id'],
         'is_open' => 1,
       ]);
-      return redirect('/works/create')->with('serviceId', $serviceOrder->id ); // envío del parámetro através de la sesión
+      return redirect('/works/insert')->with('serviceId', $serviceOrder->id ); // envío del parámetro através de la sesión
     } else{
       return redirect('/dashboard')->with('danger', 'El cliente no existe o no se digitó correctamente.');
     }

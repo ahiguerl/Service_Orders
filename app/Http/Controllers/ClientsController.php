@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB; // Importante para poder aplicar las consultas de agregación
+
 use App\Client;
 use Illuminate\Http\Request;
 use App\Http\Requests\RegisterClientRequest;
@@ -36,6 +38,31 @@ class ClientsController extends Controller{
     return redirect('/dashboard')->with('success', 'El cliente fue creado exitosamente!.');
 
     // dd($client);
+  }
+
+  public function list(){
+
+    $clients = Client::paginate(10); // Approach the ORM to get the data form the DB
+    return view('clients.list', [
+      'clients' => $clients,
+    ]);
+  }
+
+  public function deleteClient($id){
+    $client = DB::table('clients')->where('id', $id)->delete();
+
+    return redirect('/clients/list')->with('danger', 'El cliente fue borrado exitosamente!.');
+  }
+
+  public function destroyClient(RegisterClientRequest $request, $id){
+    if($request->ajax()){
+      $client = Client::find($id);
+      $client->delete();
+
+      return response()->json([
+        'message' =>  'El cliente ' . $client->name . ' fue eliminado correctamente',
+      ]);
+    }
   }
 
 }

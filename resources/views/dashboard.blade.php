@@ -36,7 +36,7 @@
 
       <div class="menuItem"><a class="menuSubItem" style="color: white;" data-toggle="modal" data-target="#myModal">Crear</a></div>
       <div class="menuItem"><a class="menuSubItem" style="color: white;" href="/services/list">Listar</a></div>
-      <div class="menuItem"><a class="menuSubItem" style="color: white;" href="#">Modificar</a></div>
+      {{-- <div class="menuItem"><a class="menuSubItem" style="color: white;" href="#">Modificar</a></div> --}}
   </div>
 
   <div class="menuItem" id="menuItem2" data-toggle="collapse" data-target="#menuSubItem2" aria-expanded="false" aria-controls="menuSubItem2">
@@ -44,8 +44,8 @@
   </div>
   <div id="menuSubItem2" class="collapse" aria-labelledby="menuItem2" data-parent="#sidenav-menu">
     <div class="menuItem"><a class="menuSubItem" style="color: white;" href="/clients/register">Crear</a></div>
-    <div class="menuItem"><a class="menuSubItem" style="color: white;" href="#">Listar</a></div>
-    <div class="menuItem"><a class="menuSubItem" style="color: white;" href="#">Modificar</a></div>
+    <div class="menuItem"><a class="menuSubItem" style="color: white;" href="/clients/list">Listar</a></div>
+    {{-- <div class="menuItem"><a class="menuSubItem" style="color: white;" href="#">Modificar</a></div> --}}
   </div>
 
 @endsection

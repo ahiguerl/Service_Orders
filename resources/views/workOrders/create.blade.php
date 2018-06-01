@@ -24,12 +24,12 @@
 
 @section('dashboard_content')
 <form class="" action="/works/create" method="post">
-
+  @csrf
   <div class="form-group row ">
     <label for="service_Id" class="col-md-4 col-form-label text-md-right">{{ __('Orden de servicio') }}</label>
 
     <div class="col-md-6">
-      <input type="text" class="form-control" name="service_Id" value="{{ session('serviceId') }}" disabled>
+      <input type="text" class="form-control" name="service_Id" value="{{ session('serviceId') }}" >
     </div>
   </div>
 

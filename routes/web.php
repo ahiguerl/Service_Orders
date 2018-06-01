@@ -34,6 +34,16 @@ Auth::routes();
 
   Route::post('/works/create', 'WorkOrderController@create');
 
+  Route::get('/works/insert', 'WorkOrderController@insert');
+
+
+
   Route::get('/clients/register', 'ClientsController@register');
 
   Route::post('/clients/create', 'ClientsController@create');
+
+  Route::get('/clients/list', 'ClientsController@list');
+
+  Route::get('/clients/delete/{id}', 'ClientsController@deleteClient');
+
+  Route::delete('/clients/destroy/{id}', 'ClientsController@destroyClient')->name('destroyClient');

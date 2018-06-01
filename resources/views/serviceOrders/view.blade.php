@@ -108,8 +108,8 @@
             </tbody>
           </table>
           <div class="text-right">
-            <a class="btn btn-primary btn-sm btn-table" href="#" style="width: 200px;"  role="button">Iniciar   </a>
-            <a class="btn btn-warning btn-sm btn-table" href="#" style="width: 200px;" role="button">Rechazar</a>
+            {{-- <a class="btn btn-primary btn-sm btn-table" href="#" style="width: 200px;"  role="button">Iniciar   </a>
+            <a class="btn btn-warning btn-sm btn-table" href="#" style="width: 200px;" role="button">Rechazar</a> --}}
           </div>
 
         </div>

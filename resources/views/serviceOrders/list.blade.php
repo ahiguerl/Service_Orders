@@ -16,7 +16,7 @@
 
 
 @section('sidebar_options')
-  <div class="menuItem"><a class="menuSubItem" style="color: white;" href="/services/create">Crear</a></div>
+  <div class="menuItem"><a class="menuSubItem" style="color: white;" href="/dashboard">Volver</a></div>
 @endsection
 
 

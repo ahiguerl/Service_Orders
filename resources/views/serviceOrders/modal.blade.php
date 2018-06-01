@@ -9,6 +9,7 @@
       </div>
 
       <div class="modal-body">
+        
         <form action="/services/create" method="post">
           @csrf
           <div class="form-group row ">
