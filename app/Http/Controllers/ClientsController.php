@@ -50,17 +50,23 @@ class ClientsController extends Controller{
 
   public function deleteClient($id){
     $client = DB::table('clients')->where('id', $id)->delete();
+    return response()->json([
+      'message' =>  'Borrado',
+      // 'client' => $client,
+    ]);
 
-    return redirect('/clients/list')->with('danger', 'El cliente fue borrado exitosamente!.');
+    // return redirect('/clients/list')->with('danger', 'El cliente fue borrado exitosamente!.'); //variable sesion
   }
 
-  public function destroyClient(RegisterClientRequest $request, $id){
+  public function destroyClient(Request $request, $id){
     if($request->ajax()){
+
+
       $client = Client::find($id);
       $client->delete();
 
       return response()->json([
-        'message' =>  'El cliente ' . $client->name . ' fue eliminado correctamente',
+        'message' =>  'Borrado' ,
       ]);
     }
   }

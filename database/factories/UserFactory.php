@@ -50,7 +50,7 @@ $factory->define(App\RepairProcess::class, function(Faker $faker){
 
 $factory->define(App\Client::class, function (Faker $faker) {
     return [
-      'id' => rand(800000000, 999999999) . '-' . rand(0, 9),
+      'id' => rand(800000000, 999999999),
       'name' => $faker->company,
       'address' => $faker->address,
       'city' => rand(0, 1000),
@@ -58,6 +58,7 @@ $factory->define(App\Client::class, function (Faker $faker) {
       'phone' => rand(1000000, 9999999),
       'contact_name' => $faker->name,
       'extension_number' => rand(1000, 9999),
+      'email' => $faker->safeEmail,
     ];
 });
 
@@ -81,18 +82,10 @@ $factory->define(App\Supply::class, function(Faker $faker){
 
 
 $factory->define(App\ServiceOrder::class, function(Faker $faker){
-  $fakeClient = ['800027314-0','800047734-4','800081275-6','800117232-1',
-'800117502-5','800121414-3','800136382-9','800140844-2',
-'800161748-5','800191750-7','800201620-5','800207871-5',
-'800218679-8','800219752-9','800232883-9','800275356-8',
-'800316845-3','800321673-6','800345832-5','800366019-1',
-'800374524-3','800445304-1','800464655-3','800481109-4',
-'800521938-4',];
-
   return[
     //'date' => date('Y-m-d G:i:s'),
     'is_open' => true,
-    'client_id' => $fakeClient[rand(0, 24)],
+    'client_id' => rand(800000000, 999999999),
   ];
 });
 

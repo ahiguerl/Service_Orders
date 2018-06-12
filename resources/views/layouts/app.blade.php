@@ -13,10 +13,9 @@
     <title>@yield('title')</title>
 
 
-    <!-- Scripts -->
 
     <script src="{{ asset('js/app.js') }}" defer></script>
-    
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>

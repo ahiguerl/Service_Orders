@@ -14,7 +14,7 @@ class AddingRelationshipBetweenClientsAndServiceOrders extends Migration
     public function up()
     {
         Schema::table('service_orders', function (Blueprint $table) {
-          $table->string('client_id'); // Will contain clients id
+          $table->string('client_id', 10); // Will contain clients id
           $table->foreign('client_id')->references('id')->on('clients');
         });
     }

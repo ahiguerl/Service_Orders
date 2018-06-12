@@ -20,6 +20,10 @@ Auth::routes();
 // Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
   Route::get('/dashboard', 'DashboardController@index');
 
+  Route::get('/prueba', function(){
+    return 'hola';
+  });
+
   Route::get('/dashboard/prueba', 'DashboardController@prueba');
 
   Route::get('/services/edit', 'ServiceOrdersController@edit');
@@ -44,6 +48,6 @@ Auth::routes();
 
   Route::get('/clients/list', 'ClientsController@list');
 
-  Route::get('/clients/delete/{id}', 'ClientsController@deleteClient');
+  Route::post('/clients/delete/{id}', 'ClientsController@deleteClient');
 
   Route::delete('/clients/destroy/{id}', 'ClientsController@destroyClient')->name('destroyClient');
